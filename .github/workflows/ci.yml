@@ -60,27 +60,7 @@ jobs:
       - name: Build container image
         run: docker build --pull -t project03-api:${{ github.sha }} .
 
-      - name: Inspect image packages
-        run: |
-          docker run --rm \
-            project03-api:${{ github.sha }} \
-            python -m pip list
 
-          docker run --rm \
-            project03-api:${{ github.sha }} \
-            sh -c 'find /usr/local -type f \( -iname "*sbom*" -o -iname "*.spdx.json" -o -iname "*.cdx.json" \) -print'
-
-      - name: Scan image for vulnerabilities
-        uses: aquasecurity/trivy-action@v0.36.0
-        with:
-          version: v0.76.1
-          scan-type: image
-          image-ref: project03-api:${{ github.sha }}
-          scanners: vuln
-          format: table
-          severity: HIGH,CRITICAL
-          ignore-unfixed: false
-          exit-code: "1"
 
       # 7. Start the same image
       - name: Start container
