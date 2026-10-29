@@ -1,0 +1,43 @@
+This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking project03-api-alb-1344718377.ap-south-1.elb.amazonaws.com (be patient)
+Finished 73700 requests
+
+
+Server Software:        BaseHTTP/0.6
+Server Hostname:        project03-api-alb-1344718377.ap-south-1.elb.amazonaws.com
+Server Port:            80
+
+Document Path:          /health
+Document Length:        21 bytes
+
+Concurrency Level:      5
+Time taken for tests:   60.000 seconds
+Complete requests:      73700
+Failed requests:        0
+Total transferred:      13634500 bytes
+HTML transferred:       1547700 bytes
+Requests per second:    1228.32 [#/sec] (mean)
+Time per request:       4.071 [ms] (mean)
+Time per request:       0.814 [ms] (mean, across all concurrent requests)
+Transfer rate:          221.91 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.2      1      37
+Processing:     1    4   5.2      2      71
+Waiting:        1    3   5.0      2      63
+Total:          2    4   5.2      3      72
+
+Percentage of the requests served within a certain time (ms)
+  50%      3
+  66%      3
+  75%      3
+  80%      4
+  90%      5
+  95%     10
+  98%     29
+  99%     32
+ 100%     72 (longest request)
