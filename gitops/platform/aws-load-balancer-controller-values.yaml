@@ -1,0 +1,15 @@
+clusterName: project03-eks
+region: ap-south-1
+vpcId: vpc-0053bf7f247c7ce83
+
+replicaCount: 2
+
+serviceAccount:
+  create: true
+  name: aws-load-balancer-controller
+
+controllerConfig:
+  featureGates:
+    ALBGatewayAPI: false
+    NLBGatewayAPI: false
+    GatewayListenerSet: false
