@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: 036706657723.dkr.ecr.ap-south-1.amazonaws.com/project03-api
-  digest: "sha256:2a4007a5dce92e56b22459bbe2a34e5b3bf7e5c0031e97406ba41c591fe6bf2"
+  digest: "sha256:818e5195cbe2d7a8d83b83744df28d5fa77c65ace24051272543da949d34e4fb"
 
 service:
   port: 80
